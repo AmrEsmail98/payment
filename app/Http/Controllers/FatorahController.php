@@ -13,22 +13,20 @@ class FatorahController extends Controller
             $this ->fatoorahServices =$FatoorahServices;
     }
 
-
-
  public function payOrder(){
      $data=[
         'CustomerName'       => 'Amr Esmail',
         'NotificationOption' => 'Lnk',
           'CustomerMobile'     => '01090807013',
-          'InvoiceValue'       => '100',
+          'InvoiceValue'       => '500',
           'DisplayCurrencyIso' => 'KWD',
           'CustomerEmail'      => 'amr@example.com',
-          'CallBackUrl'        => 'https://emr.local/api/call_back',
-           'ErrorUrl'           => 'https://youtube.com',
+          'CallBackUrl'        => 'https://emr.local/call_back',
+           'ErrorUrl'           => 'http://google.com',
            'Language'           => 'en'
 
      ];
-      return $this->fatoorahServices->sendPayment($data);
+      return $data= $this->fatoorahServices->sendPayment($data);
  }
  public function paymentCallBack(Request $request)
  {
@@ -38,7 +36,6 @@ class FatorahController extends Controller
 
  $paymentData=$this->fatoorahServices->getPaymentStatus($data);
  return $paymentData['Data']['InvoiceId'];
-
+// return $this->fatoorahServices->getPaymentStatus($data);
  }
-
 }

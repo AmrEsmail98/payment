@@ -39,7 +39,7 @@
   </tr>
   <tr>
     <td class="tdwhite">
-	<form action="SendPerformREQuest.php" method="post">
+	<form action="https://demo.MyFatoorah.com/KWT/ie/01072113587341" method="get">
       {{-- <input type="hidden" name="product" value="<?php echo $product;?>">
       <input type="hidden" name="price" value="<?php echo $price;?>">
       <input type="hidden" name="qty" value="<?php echo $qty;?>">
@@ -59,7 +59,7 @@
         </tr>
         <tr>
           <td class="tdwhite"></td>
-          <td class="tdwhite"><input type="submit" value="Buy"></td>
+          <td class="tdwhite"><input type="submit"  value="Buy"></td>
         </tr>
       </table>
     </form></td>

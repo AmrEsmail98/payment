@@ -12,7 +12,7 @@ use App\Http\Controllers\FatorahController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
